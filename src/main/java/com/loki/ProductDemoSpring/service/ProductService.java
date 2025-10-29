@@ -35,42 +35,10 @@ public class ProductService {
     }
 
 
-//    List<Product> products = new ArrayList<>();
-//
-////    ProductDB db = new ProductDB();
-//
-//    public ProductService() throws SQLException {
-//    }
-//
-//    public void addProduct(Product product) {
-////            products.add(product);
-//            db.save(product);
-//    }
-//
-//    public List<Product> getAllProducts() {
-//        return db.getAll();
-//    }
-//
-//    public List<Product> getProductByType(String type) {
-//
-//        List<Product> t = new ArrayList<>();
-//
-//        for(Product p:products){
-//            if(p.getType().equals(type)){
-//                t.add(p);
-//            }
-//        }
-//
-//        return t;
-//    }
+    public boolean addProduct(Product product) {
+        Product savedProduct = db.save(product);
+        return savedProduct != null;  // return true if saved successfully
+    }
 
-//    public List<Product> getOutOfWarranty() {
-//        List<Product> o = products.stream()
-//                .filter(p->p.getWarranty()<=2024)
-//                .collect(Collectors.toList());
-//
-//
-//
-//        return o;
-//    }
+
 }

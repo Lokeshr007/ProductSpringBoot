@@ -7,6 +7,6 @@ import org.springframework.stereotype.Repository;
 import java.util.List;
 
 @Repository
-public interface ProductDB  extends JpaRepository<Product,Integer> ,ProductCustomRepository,ProductCustomRepositoryImpl{
+public interface ProductDB  extends JpaRepository<Product,Integer>{
     List<Product> findAllByType(String type);
 }
